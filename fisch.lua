@@ -4,6 +4,7 @@
 shared.control = {
     AwayRodPerfect = true,
     AutoPool = true,
+    GodMode = true
 }
 local equiq 
 local namefish
@@ -15,7 +16,10 @@ namefish = hookmetamethod(game,"__namecall",function(self,...)
         args[1] = 100 -- If you want safety,you need to use math.random(94.3,99.132) or randon [[ 1-100 ]] Ex args[1] = math.random(94.3,99.132);
         args[2] = 1
 		return namefish(self,unpack(args))
-	end
+    elseif not checkcaller() and methods == "fireserver" and self.Name == "drown" and shared.control.GodMode  then -- nerver drown forever skull
+        args[1] = 100 -- If you want safety,you need to use math.random(97,99.131) or randon [[ 50-100 ]]
+        return namefish(self,unpack(args))
+    end
 	return namefish(self,...)
 end)
 
