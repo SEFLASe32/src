@@ -29,7 +29,7 @@ task.spawn(function()
 		if shared.Config["AutoRetry"] then
 			if game:GetService("Players").LocalPlayer.PlayerGui.HUD.Enabled == false then
 			    repeat wait()
-			        if game:GetService("Players").LocalPlayer.PlayerGui.RewardsUI.Enabled == false then
+			        if game:GetService("Players").LocalPlayer.PlayerGui.RewardsUI.Enabled == false and game:GetService("Players").LocalPlayer.PlayerGui.RewardsUI.Enabled == false then
     			        game:GetService("VirtualInputManager"):SendMouseButtonEvent(0,0, 0, true, game, 1)
                         game:GetService("VirtualInputManager"):SendMouseButtonEvent(0,0, 0, false, game, 1)
                     end
