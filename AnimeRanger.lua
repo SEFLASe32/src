@@ -1,3 +1,4 @@
+
 shared.Config = {
 	["AutoVote"] = true,
 	["AutoPlay"] = true,
