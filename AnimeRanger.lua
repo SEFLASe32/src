@@ -23,7 +23,7 @@ task.spawn(function()
 					repeat wait()
 						game:GetService("ReplicatedStorage"):WaitForChild("Remote"):WaitForChild("Server"):WaitForChild("Units"):WaitForChild("AutoPlay"):FireServer()
 						wait(0.75)
-					until game:GetService("Players").LocalPlayer.PlayerGui.HUD.InGame.Main.AutoPlay.Back["true"].Enabled == true
+					until game:GetService("Players").LocalPlayer.PlayerGui.HUD.InGame.Main.AutoPlay.Back["true"].Enabled == true or not shared.Config["AutoPlay"]
 				end
 			end
 		end
@@ -34,11 +34,11 @@ task.spawn(function()
     			        game:GetService("VirtualInputManager"):SendMouseButtonEvent(0,0, 0, true, game, 1)
                         game:GetService("VirtualInputManager"):SendMouseButtonEvent(0,0, 0, false, game, 1)
                     end
-			    until game:GetService("Players").LocalPlayer.PlayerGui.RewardsUI.Enabled == true
+			    until game:GetService("Players").LocalPlayer.PlayerGui.RewardsUI.Enabled == true or not shared.Config["AutoRetry"]
 				if game:GetService("Players").LocalPlayer.PlayerGui.RewardsUI.Enabled == true then
 					repeat wait()
 									game:GetService("ReplicatedStorage"):WaitForChild("Remote"):WaitForChild("Server"):WaitForChild("OnGame"):WaitForChild("Voting"):WaitForChild("VoteRetry"):FireServer()
-					until game:GetService("Players").LocalPlayer.PlayerGui.RewardsUI.Enabled == false
+					until game:GetService("Players").LocalPlayer.PlayerGui.RewardsUI.Enabled == false or not shared.Config["AutoRetry"]
 				end 
 			end
 		end
