@@ -2162,6 +2162,7 @@ function verny.create(Settings)
 		return Tab
 	end
 end
+verny.call()
 ConfigModule:CreateFile()
 ConfigModule:LoadFile()
 return ConfigModule
