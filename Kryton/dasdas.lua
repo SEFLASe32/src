@@ -937,6 +937,7 @@ function verny.create(Settings)
 						Position = UDim2.new(-0.00500016892, 0, 1.5, 0),
 						Size = UDim2.new(0, 365, 0, 175),
 						ZIndex = 2,
+						AutomaticCanvasSize = "Y",
 					})
 					local dropdownscrollingframe_uipadding = Create("UIPadding",{
 						Name = "dropdownscrollingframe_uipadding",
